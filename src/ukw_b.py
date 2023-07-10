@@ -1,3 +1,4 @@
+from file_writer import write,write_out
 class ukw_b:
     wiring = {
         'A': 'Y',
@@ -29,5 +30,6 @@ class ukw_b:
     }
 
     def get(self, char):
-        print("Reflector UKW-B", char, "to", self.wiring[char])
+        write(f"Reflector UKW-B {char} to {self.wiring[char]}")
+        write_out(f" -> (R) {self.wiring[char]}")
         return self.wiring[char]

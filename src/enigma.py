@@ -3,6 +3,7 @@ from rotor import rotor
 from rotor_controller import rotor_controller
 from ukw_b import ukw_b 
 from config import read_config
+from file_writer import write, reset_file, write_out
 
 # Keyboard -> Plugboard -> ETW -> Rotor -> Reflektor -> Rotor -> Plugboard -> Lampboard
 
@@ -17,6 +18,7 @@ class enigma:
         wiring_1, wiring_2, wiring_3, cnt_1, cnt_2, cnt_3, to_1, to_2, to_3 = read_config(txt)
         self.rc = rotor_controller(wiring_1, wiring_2, wiring_3, cnt_1, cnt_2, cnt_3, to_1, to_2, to_3)
         self.rf = ukw_b()
+        reset_file()
 
     def plug(self, a, b):
         self.pb.add(a, b)
@@ -26,39 +28,45 @@ class enigma:
 
     def encrypt(self, char):
         # ETW is skipped
-        print("----------ENCRYPT----------")
-        print("Input:", char)
+        write("----------ENCRYPT----------")
+        write(f"Input: {char}")
+        write_out(f"{char}")
         out = self.pb.get(char)
         self.rc.rotate()
         out = self.rc.substitute_in(out)
         out = self.rf.get(out)
         out = self.rc.substitute_out(out)
         out = self.pb.get(out)
-        print("Output:", out)
+        write(f"Output: {out}")
+        write_out(f" -> {out}\n")
         return out
 
     def decrypt_rev(self, char):
-        print("----------DECRYPT REV----------")
-        print("Input:", char)
+        write("----------DECRYPT REV----------")
+        write(f"Input: {char}")
+        write_out(f"{char}")
         out = self.pb.get(char)
         out = self.rc.inverse_substitute_in(out)
         out = self.rf.get(out)
         out = self.rc.inverse_substitute_out(out)
         self.rc.rev_rotate()
         out = self.pb.get(out)
-        print("Output:", out)
+        write(f"Output: {out}")
+        write_out(f" -> {out}\n")
         return out
     
     def decrypt(self, char):
-        print("----------DECRYPT----------")
-        print("Input:", char)
+        write("----------DECRYPT----------")
+        write(f"Input: {char}")
+        write_out(f"{char}")
         out = self.pb.get(char)
         self.rc.rotate()
         out = self.rc.inverse_substitute_in(out)
         out = self.rf.get(out)
         out = self.rc.inverse_substitute_out(out)
         out = self.pb.get(out)
-        print("Output:", out)
+        write(f"Output: {out}")
+        write_out(f" -> {out}\n")
         return out
     
     def encrypt_all(self, string):
@@ -81,7 +89,7 @@ class enigma:
             out += self.decrypt(i)
         return out
 
-eng = enigma("./txt/test.txt")
+# eng = enigma("./txt/test.txt")
 # a = eng.encrypt_all("ABCDEFGHI")
 # print(a)
 # print("ROTOR ONE")
@@ -99,7 +107,6 @@ eng = enigma("./txt/test.txt")
 #     eng.rc.rotor_two.print()
 #     print("ROTOR THREE")
 #     eng.rc.rotor_three.print()
-b = eng.decrypt_all("CAVSISDMM")
-# b = b[::-1]
-print(b)
+# b = eng.decrypt_all("CAVSISDMM")
+# print(b)
 # eng.rc.rotor_one.print()

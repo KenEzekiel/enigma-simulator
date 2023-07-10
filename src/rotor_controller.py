@@ -1,4 +1,6 @@
 from rotor import rotor
+from file_writer import write, write_out
+
 class rotor_controller:
     rotor_one: rotor
     rotor_two: rotor
@@ -58,36 +60,48 @@ class rotor_controller:
 
     def substitute_in(self, char):
         out1 = self.rotor_one.get(char)
-        print("rotor 1", char, "to", out1)
+        write(f"rotor 1 {char} to {out1}")
+        write_out(f" -> (R1) {out1}")
         out2 = self.rotor_two.get(out1)
-        print("rotor 2", out1, "to", out2)
+        write(f"rotor 2 {out1} to {out2}")
+        write_out(f" -> (R2) {out2}")
         out3 = self.rotor_three.get(out2)
-        print("rotor 3", out2, "to", out3)
+        write(f"rotor 3 {out2} to {out3}")
+        write_out(f" -> (R3) {out3}")
         return out3
 
     def substitute_out(self, char):
         out3 = self.rotor_three.get(char)
-        print("rotor 3", char, "to", out3)
+        write(f"rotor 3 {char} to {out3}")
+        write_out(f" -> (R3) {out3}")
         out2 = self.rotor_two.get(out3)
-        print("rotor 2", out3, "to", out2)
+        write(f"rotor 2 {out3} to {out2}")
+        write_out(f" -> (R2) {out2}")
         out1 = self.rotor_one.get(out2)
-        print("rotor 1", out2, "to", out1)
+        write(f"rotor 1 {out2} to {out1}")
+        write_out(f" -> (R1) {out1}")
         return out1
     
     def inverse_substitute_in(self, char):
         out1 = self.rotor_one.inverse_get(char)
-        print("inverse rotor 1", char, "to", out1)
+        write(f"inverse rotor 1 {char} to {out1}")
+        write_out(f" -> (IR1) {out1}")
         out2 = self.rotor_two.inverse_get(out1)
-        print("inverse rotor 2", out1, "to", out2)
+        write(f"inverse rotor 2 {out1} to {out2}")
+        write_out(f" -> (IR2) {out2}")
         out3 = self.rotor_three.inverse_get(out2)
-        print("inverse rotor 3", out2, "to", out3)
+        write(f"inverse rotor 3 {out2} to {out3}")
+        write_out(f" -> (IR3) {out3}")
         return out3
 
     def inverse_substitute_out(self, char):
         out3 = self.rotor_three.inverse_get(char)
-        print("inverse rotor 3", char, "to", out3)
+        write(f"inverse rotor 3 {char} to {out3}")
+        write_out(f" -> (IR3) {out3}")
         out2 = self.rotor_two.inverse_get(out3)
-        print("inverse rotor 2", out3, "to", out2)
+        write(f"inverse rotor 2 {out3} to {out2}")
+        write_out(f" -> (IR2) {out2}")
         out1 = self.rotor_one.inverse_get(out2)
-        print("inverse rotor 1", out2, "to", out1)
+        write(f"inverse rotor 1 {out2} to {out1}")
+        write_out(f" -> (IR1) {out1}")
         return out1

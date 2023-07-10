@@ -37,45 +37,45 @@ class rotor:
             if self.wiring[i] == char:
                 return i
 
-wiring = {
-        'A': 'Y',
-        'B': 'R',
-        'C': 'U',
-        'D': 'H',
-        'E': 'Q',
-        'F': 'S',
-        'G': 'L',
-        'H': 'D',
-        'I': 'P',
-        'J': 'X',
-        'K': 'N',
-        'L': 'G',
-        'M': 'O',
-        'N': 'K',
-        'O': 'M',
-        'P': 'I',
-        'Q': 'E',
-        'R': 'B',
-        'S': 'F',
-        'T': 'Z',
-        'U': 'C',
-        'V': 'W',
-        'W': 'V',
-        'X': 'J',
-        'Y': 'A',
-        'Z': 'T'
-    }
-rotor_one = rotor(wiring)
+# wiring = {
+#         'A': 'Y',
+#         'B': 'R',
+#         'C': 'U',
+#         'D': 'H',
+#         'E': 'Q',
+#         'F': 'S',
+#         'G': 'L',
+#         'H': 'D',
+#         'I': 'P',
+#         'J': 'X',
+#         'K': 'N',
+#         'L': 'G',
+#         'M': 'O',
+#         'N': 'K',
+#         'O': 'M',
+#         'P': 'I',
+#         'Q': 'E',
+#         'R': 'B',
+#         'S': 'F',
+#         'T': 'Z',
+#         'U': 'C',
+#         'V': 'W',
+#         'W': 'V',
+#         'X': 'J',
+#         'Y': 'A',
+#         'Z': 'T'
+#     }
+# rotor_one = rotor(wiring)
 # rotor_one.rotate_left()
 # rotor_one.rotate_left()
 # rotor_one.rotate_left()
 # rotor_one.rotate_left()
 # rotor_one.rotate_left()
 # rotor_one.rotate_left()
-rotor_one.rotate_right()
-rotor_one.rotate_right()
 # rotor_one.rotate_right()
 # rotor_one.rotate_right()
 # rotor_one.rotate_right()
 # rotor_one.rotate_right()
-rotor_one.print()
+# rotor_one.rotate_right()
+# rotor_one.rotate_right()
+# rotor_one.print()
