@@ -1,0 +1,312 @@
+----------DECRYPT----------
+Input: J
+Plugboard get J to J
+rotor 1 J to T
+rotor 2 T to N
+rotor 3 N to N
+Reflector UKW-B N to K
+inverse rotor 3 K to U
+inverse rotor 2 U to H
+inverse rotor 1 H to A
+Plugboard get A to A
+Output: A
+----------DECRYPT----------
+Input: N
+Plugboard get N to N
+rotor 1 N to U
+rotor 2 U to X
+rotor 3 X to S
+Reflector UKW-B S to F
+inverse rotor 3 F to C
+inverse rotor 2 C to B
+inverse rotor 1 B to B
+Plugboard get B to B
+Output: B
+----------DECRYPT----------
+Input: A
+Plugboard get A to A
+rotor 1 A to A
+rotor 2 A to I
+rotor 3 I to R
+Reflector UKW-B R to B
+inverse rotor 3 B to A
+inverse rotor 2 A to I
+inverse rotor 1 I to C
+Plugboard get C to C
+Output: C
+----------DECRYPT----------
+Input: S
+Plugboard get S to S
+rotor 1 S to A
+rotor 2 A to I
+rotor 3 I to R
+Reflector UKW-B R to B
+inverse rotor 3 B to A
+inverse rotor 2 A to I
+inverse rotor 1 I to D
+Plugboard get D to D
+Output: D
+----------DECRYPT----------
+Input: X
+Plugboard get X to X
+rotor 1 X to A
+rotor 2 A to I
+rotor 3 I to R
+Reflector UKW-B R to B
+inverse rotor 3 B to A
+inverse rotor 2 A to I
+inverse rotor 1 I to E
+Plugboard get E to E
+Output: E
+----------DECRYPT----------
+Input: M
+Plugboard get M to M
+rotor 1 M to V
+rotor 2 V to E
+rotor 3 E to J
+Reflector UKW-B J to X
+inverse rotor 3 X to K
+inverse rotor 2 K to J
+inverse rotor 1 J to F
+Plugboard get F to F
+Output: F
+----------DECRYPT----------
+Input: Z
+Plugboard get Z to Z
+rotor 1 Z to M
+rotor 2 M to S
+rotor 3 S to G
+Reflector UKW-B G to L
+inverse rotor 3 L to F
+inverse rotor 2 F to Q
+inverse rotor 1 Q to G
+Plugboard get G to G
+Output: G
+----------DECRYPT----------
+Input: L
+Plugboard get L to L
+rotor 1 L to Y
+rotor 2 Y to D
+rotor 3 D to H
+Reflector UKW-B H to D
+inverse rotor 3 D to B
+inverse rotor 2 B to O
+inverse rotor 1 O to H
+Plugboard get H to H
+Output: H
+----------DECRYPT----------
+Input: A
+Plugboard get A to A
+rotor 1 A to E
+rotor 2 E to H
+rotor 3 H to P
+Reflector UKW-B P to I
+inverse rotor 3 I to Q
+inverse rotor 2 Q to F
+inverse rotor 1 F to I
+Plugboard get I to I
+Output: I
+----------DECRYPT----------
+Input: O
+Plugboard get O to O
+rotor 1 O to X
+rotor 2 X to N
+rotor 3 N to N
+Reflector UKW-B N to K
+inverse rotor 3 K to U
+inverse rotor 2 U to W
+inverse rotor 1 W to J
+Plugboard get J to J
+Output: J
+----------DECRYPT----------
+Input: G
+Plugboard get G to G
+rotor 1 G to D
+rotor 2 D to R
+rotor 3 R to W
+Reflector UKW-B W to V
+inverse rotor 3 V to L
+inverse rotor 2 L to N
+inverse rotor 1 N to K
+Plugboard get K to K
+Output: K
+----------DECRYPT----------
+Input: Z
+Plugboard get Z to Z
+rotor 1 Z to D
+rotor 2 D to R
+rotor 3 R to W
+Reflector UKW-B W to V
+inverse rotor 3 V to L
+inverse rotor 2 L to N
+inverse rotor 1 N to L
+Plugboard get L to L
+Output: L
+----------DECRYPT----------
+Input: H
+Plugboard get H to H
+rotor 1 H to X
+rotor 2 X to N
+rotor 3 N to N
+Reflector UKW-B N to K
+inverse rotor 3 K to U
+inverse rotor 2 U to W
+inverse rotor 1 W to M
+Plugboard get M to M
+Output: M
+----------DECRYPT----------
+Input: X
+Plugboard get X to X
+rotor 1 X to B
+rotor 2 B to C
+rotor 3 C to F
+Reflector UKW-B F to S
+inverse rotor 3 S to X
+inverse rotor 2 X to U
+inverse rotor 1 U to N
+Plugboard get N to N
+Output: N
+----------DECRYPT----------
+Input: U
+Plugboard get U to U
+rotor 1 U to Y
+rotor 2 Y to D
+rotor 3 D to H
+Reflector UKW-B H to D
+inverse rotor 3 D to B
+inverse rotor 2 B to O
+inverse rotor 1 O to O
+Plugboard get O to O
+Output: O
+----------DECRYPT----------
+Input: H
+Plugboard get H to H
+rotor 1 H to J
+rotor 2 J to K
+rotor 3 K to X
+Reflector UKW-B X to J
+inverse rotor 3 J to E
+inverse rotor 2 E to V
+inverse rotor 1 V to P
+Plugboard get P to P
+Output: P
+----------DECRYPT----------
+Input: N
+Plugboard get N to N
+rotor 1 N to J
+rotor 2 J to K
+rotor 3 K to X
+Reflector UKW-B X to J
+inverse rotor 3 J to E
+inverse rotor 2 E to V
+inverse rotor 1 V to Q
+Plugboard get Q to Q
+Output: Q
+----------DECRYPT----------
+Input: A
+Plugboard get A to A
+rotor 1 A to J
+rotor 2 J to K
+rotor 3 K to X
+Reflector UKW-B X to J
+inverse rotor 3 J to E
+inverse rotor 2 E to V
+inverse rotor 1 V to R
+Plugboard get R to R
+Output: R
+----------DECRYPT----------
+Input: V
+Plugboard get V to V
+rotor 1 V to X
+rotor 2 X to N
+rotor 3 N to N
+Reflector UKW-B N to K
+inverse rotor 3 K to U
+inverse rotor 2 U to W
+inverse rotor 1 W to S
+Plugboard get S to S
+Output: S
+----------DECRYPT----------
+Input: E
+Plugboard get E to E
+rotor 1 E to N
+rotor 2 N to L
+rotor 3 L to V
+Reflector UKW-B V to W
+inverse rotor 3 W to R
+inverse rotor 2 R to D
+inverse rotor 1 D to T
+Plugboard get T to T
+Output: T
+----------DECRYPT----------
+Input: Q
+Plugboard get Q to Q
+rotor 1 Q to U
+rotor 2 U to X
+rotor 3 X to S
+Reflector UKW-B S to F
+inverse rotor 3 F to C
+inverse rotor 2 C to B
+inverse rotor 1 B to U
+Plugboard get U to U
+Output: U
+----------DECRYPT----------
+Input: Z
+Plugboard get Z to Z
+rotor 1 Z to C
+rotor 2 C to J
+rotor 3 J to T
+Reflector UKW-B T to Z
+inverse rotor 3 Z to M
+inverse rotor 2 M to S
+inverse rotor 1 S to V
+Plugboard get V to V
+Output: V
+----------DECRYPT----------
+Input: D
+Plugboard get D to D
+rotor 1 D to V
+rotor 2 V to E
+rotor 3 E to J
+Reflector UKW-B J to X
+inverse rotor 3 X to K
+inverse rotor 2 K to J
+inverse rotor 1 J to W
+Plugboard get W to W
+Output: W
+----------DECRYPT----------
+Input: V
+Plugboard get V to V
+rotor 1 V to I
+rotor 2 I to A
+rotor 3 A to B
+Reflector UKW-B B to R
+inverse rotor 3 R to I
+inverse rotor 2 I to A
+inverse rotor 1 A to X
+Plugboard get X to X
+Output: X
+----------DECRYPT----------
+Input: Z
+Plugboard get Z to Z
+rotor 1 Z to I
+rotor 2 I to A
+rotor 3 A to B
+Reflector UKW-B B to R
+inverse rotor 3 R to I
+inverse rotor 2 I to A
+inverse rotor 1 A to Y
+Plugboard get Y to Y
+Output: Y
+----------DECRYPT----------
+Input: M
+Plugboard get M to M
+rotor 1 M to V
+rotor 2 V to E
+rotor 3 E to J
+Reflector UKW-B J to X
+inverse rotor 3 X to K
+inverse rotor 2 K to J
+inverse rotor 1 J to Z
+Plugboard get Z to Z
+Output: Z

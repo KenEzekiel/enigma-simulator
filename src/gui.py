@@ -190,9 +190,9 @@ def check():
     global machine
     info = "Index starts from 0\n"
     info += f"Plugboard : \n{machine.pb.board}\n"
-    info += f"Rotor 1 : \n{machine.rc.rotor_one.wiring}\n current index : {machine.rc.cnt_1}\n rotate index: {machine.rc.to_1}\n"
-    info += f"Rotor 2 : \n{machine.rc.rotor_two.wiring}\n current index : {machine.rc.cnt_2}\n rotate index: {machine.rc.to_2}\n"
-    info += f"Rotor 3 : \n{machine.rc.rotor_three.wiring}\n current index : {machine.rc.cnt_3}\n rotate index: {machine.rc.to_3}\n"
+    info += f"Rotor 1 : \n{machine.rc.rotor_one.wiring}\n current index : {machine.rc.cnt_1}\n rotate index: {machine.rc.to_1}\n current offset: {machine.rc.rotor_one.offset}\n"
+    info += f"Rotor 2 : \n{machine.rc.rotor_two.wiring}\n current index : {machine.rc.cnt_2}\n rotate index: {machine.rc.to_2}\n current offset: {machine.rc.rotor_two.offset}\n"
+    info += f"Rotor 3 : \n{machine.rc.rotor_three.wiring}\n current index : {machine.rc.cnt_3}\n rotate index: {machine.rc.to_3}\n current offset: {machine.rc.rotor_three.offset}\n"
     info += f"Reflector: {machine.rf.wiring}\n"
     messagebox.showinfo(title="Settings", message=info)
 

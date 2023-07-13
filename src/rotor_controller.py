@@ -12,51 +12,36 @@ class rotor_controller:
     to_2 : int
     to_3 : int
 
-    def __init__(self, wiring_1, wiring_2, wiring_3, cnt_1, cnt_2, cnt_3, to_1, to_2, to_3):
-        self.rotor_one = rotor(wiring_1)
-        self.rotor_two = rotor(wiring_2)
-        self.rotor_three = rotor(wiring_3)
+    def __init__(self, wiring_1, wiring_2, wiring_3, cnt_1, cnt_2, cnt_3, to_1, to_2, to_3, rs1, rs2, rs3):
+        self.rotor_one = rotor(wiring_1, cnt_1, rs1)
+        self.rotor_two = rotor(wiring_2, cnt_2, rs2)
+        self.rotor_three = rotor(wiring_3, cnt_3, rs3)
         self.cnt_1 = cnt_1
         self.cnt_2 = cnt_2
         self.cnt_3 = cnt_3
         self.to_1 = to_1
         self.to_2 = to_2
         self.to_3 = to_3
-        for i in range(cnt_1):
-            self.rotor_one.rotate_left()
-        for i in range(cnt_2):
-            self.rotor_two.rotate_left()
-        for i in range(cnt_3):
-            self.rotor_three.rotate_left()
 
 
     def rotate(self):
-        self.cnt_1 += 1
-        self.cnt_1 %= 26
-        self.rotor_one.rotate_left()
-        if self.cnt_1 == self.to_1:
-            self.cnt_2 += 1
-            self.cnt_2 %= 26
-            self.rotor_two.rotate_left()
-            if self.cnt_2 == self.to_2:
-                self.cnt_3 += 1
-                self.cnt_3 %= 26
-                self.rotor_three.rotate_left()
+        self.rotor_one.rotate_right()
+        if self.rotor_one.offset == (self.to_1 + 1) % 26:
+            self.rotor_two.rotate_right()
+            print("rotor two rotate")
+            if self.rotor_two.offset == (self.to_2 + 1) % 26:  
+                self.rotor_three.rotate_right()
+                print("rotor three rotate")
 
 
     def rev_rotate(self):
-        self.cnt_1 -= 1
-        self.cnt_1 %= 26
-        self.rotor_one.rotate_right()
-        if self.cnt_1 == self.to_1:
-            self.cnt_2 -= 1
-            self.cnt_2 %= 26
-            self.rotor_two.rotate_right()
-            if self.cnt_2 == self.to_2:
-                self.cnt_3 -= 1
-                self.cnt_3 %= 26
-                self.rotor_three.rotate_right()
-
+        self.rotor_one.rotate_left()
+        if self.rotor_one.offset == (self.to_1 + 1) % 26:
+            self.rotor_two.rotate_left()
+            print("inverse rotor two rotate")
+            if self.rotor_two.offset == (self.to_2 + 1) % 26:  
+                self.rotor_three.rotate_left()
+                print("inverse rotor three rotate")
 
     def substitute_in(self, char):
         out1 = self.rotor_one.get(char)

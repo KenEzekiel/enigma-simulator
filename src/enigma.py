@@ -15,8 +15,8 @@ class enigma:
 
     def __init__(self, txt):
         self.pb = plugboard()
-        wiring_1, wiring_2, wiring_3, cnt_1, cnt_2, cnt_3, to_1, to_2, to_3 = read_config(txt)
-        self.rc = rotor_controller(wiring_1, wiring_2, wiring_3, cnt_1, cnt_2, cnt_3, to_1, to_2, to_3)
+        wiring_1, wiring_2, wiring_3, cnt_1, cnt_2, cnt_3, to_1, to_2, to_3, r_s_one, r_s_two, r_s_three = read_config(txt)
+        self.rc = rotor_controller(wiring_1, wiring_2, wiring_3, cnt_1, cnt_2, cnt_3, to_1, to_2, to_3, r_s_one, r_s_two, r_s_three)
         self.rf = ukw_b()
         reset_file()
 
@@ -35,7 +35,7 @@ class enigma:
         self.rc.rotate()
         out = self.rc.substitute_in(out)
         out = self.rf.get(out)
-        out = self.rc.substitute_out(out)
+        out = self.rc.inverse_substitute_out(out)
         out = self.pb.get(out)
         write(f"Output: {out}")
         write_out(f" -> {out}\n")
@@ -61,7 +61,7 @@ class enigma:
         write_out(f"{char}")
         out = self.pb.get(char)
         self.rc.rotate()
-        out = self.rc.inverse_substitute_in(out)
+        out = self.rc.substitute_in(out)
         out = self.rf.get(out)
         out = self.rc.inverse_substitute_out(out)
         out = self.pb.get(out)

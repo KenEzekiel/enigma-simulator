@@ -1,0 +1,59 @@
+E K M F L G D Q V Z N T O W Y H X U S P A I B R C J
+J E K M F L G D Q V Z N T O W Y H X U S P A I B R C e
+K M F L G D Q V Z N T O W Y H X U S P A I B R C J E d
+A Q
+A J D K S I R U X B L H W T M C Q G Z N P Y F V O E
+A E
+B D F H J L C P R T X V Z N Y E I W G A K M U S Q O
+A V
+A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+atas -> bawah inverse (kiri ke kanan)
+bawah -> atas biasa (kanan ke kiri)
+
+decrypt
+F -> C inverse
+C -> D biasa
+D -> H biasa
+rf rotate dua kali ke arah sebaliknya
+D -> B inverse
+B -> J biasa
+J -> A inverse
+
+encrypt
+A -> J biasa
+J -> B biasa
+B -> D biasa
+rf rotate dua kali ke arah sebaliknya
+H -> D inverse
+D -> C inverse
+C -> F biasa
+
+--------------- encrypt
+Keyboard Input: B
+Rotors Position: AAC
+Plugboard Encryption: B
+Wheel 3 Encryption: D
+Wheel 2 Encryption: K
+Wheel 1 Encryption: X
+Reflector Encryption: J
+Wheel 1 Encryption: E
+Wheel 2 Encryption: Z
+Wheel 3 Encryption: U
+Plugboard Encryption: U
+Output (Lampboard): U
+-----------------------------
+Keyboard Input: C
+Rotors Position: AAD
+Plugboard Encryption: C
+Wheel 3 Encryption: D
+Wheel 2 Encryption: K
+Wheel 1 Encryption: X
+Reflector Encryption: J
+Wheel 1 Encryption: E
+Wheel 2 Encryption: Z
+Wheel 3 Encryption: V
+Plugboard Encryption: V
+Output (Lampboard): V
+-----------------------------
+
+KALAU INVERSE, CARI DI ALFABET APA SI HURUF YANG MAU DI ENKRIPSI NYA DI ROTOR
